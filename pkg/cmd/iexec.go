@@ -149,7 +149,7 @@ func (o *IExecOptions) Complete(cmd *cobra.Command, args []string) error {
 func (o *IExecOptions) Run(args []string) error {
 	podFilter := ""
 
-	if len(args) > 0 {
+	if len(args) > 0 && args[0] != "--" {
 		podFilter = args[0]
 	}
 
